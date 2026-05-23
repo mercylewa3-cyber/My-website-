@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My Business Website</title>
 
   <style>
@@ -13,9 +15,13 @@
       box-sizing:border-box;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       font-family:Arial, sans-serif;
-      background:#f4f4f4;
+      background:#e9eef5;
       color:#333;
       line-height:1.6;
     }
@@ -23,21 +29,27 @@
     header{
       background:linear-gradient(90deg,darkblue,blue);
       color:white;
-      padding:40px 20px;
       text-align:center;
+      padding:40px 20px;
+    }
+
+    header img{
+      width:100px;
+      margin-bottom:15px;
     }
 
     header h1{
-      font-size:40px;
+      font-size:42px;
       margin-bottom:10px;
     }
 
     nav{
       background:black;
-      padding:15px;
       text-align:center;
+      padding:15px;
       position:sticky;
       top:0;
+      z-index:1000;
     }
 
     nav a{
@@ -59,7 +71,7 @@
     }
 
     .hero h2{
-      font-size:35px;
+      font-size:38px;
       margin-bottom:20px;
     }
 
@@ -97,16 +109,16 @@
     }
 
     .services h2{
-      margin-bottom:40px;
       font-size:35px;
+      margin-bottom:40px;
     }
 
     .card{
       background:white;
+      max-width:700px;
       margin:20px auto;
       padding:30px;
       border-radius:20px;
-      max-width:700px;
       box-shadow:0 0 15px rgba(0,0,0,0.2);
       transition:0.3s;
     }
@@ -116,19 +128,19 @@
     }
 
     .card h3{
-      margin-bottom:15px;
       color:darkblue;
+      margin-bottom:15px;
     }
 
     #contact{
       background:white;
-      padding:50px 20px;
       text-align:center;
+      padding:60px 20px;
     }
 
     #contact h2{
+      font-size:35px;
       margin-bottom:20px;
-      font-size:32px;
     }
 
     footer{
@@ -136,6 +148,7 @@
       color:white;
       text-align:center;
       padding:20px;
+      margin-top:30px;
     }
 
     @media(max-width:600px){
@@ -160,79 +173,103 @@
     }
 
   </style>
+
 </head>
 
 <body>
 
-<header>
-  <h1>My Business</h1>
-  <p>The Best Services For Everyone</p>
-</header>
+  <header>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
-<section class="hero">
+    <h1>My Business</h1>
 
-  <h2>Welcome To My Website</h2>
+    <p>The Best Services For Everyone</p>
 
-  <p>We help customers with amazing services and professional solutions.</p>
+  </header>
 
-  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Business Image">
+  <nav>
 
-  <br>
+    <a href="#">Home</a>
 
-  <button onclick="showMessage()">Contact Us</button>
+    <a href="#services">Services</a>
 
-</section>
+    <a href="#contact">Contact</a>
 
-<section class="services" id="services">
+  </nav>
 
-  <h2>Our Services</h2>
+  <section class="hero">
 
-  <div class="card">
-    <h3>Web Design</h3>
-    <p>Beautiful and modern websites for businesses.</p>
-  </div>
+    <h2>Welcome To My Website</h2>
 
-  <div class="card">
-    <h3>Marketing</h3>
-    <p>Helping your business grow online successfully.</p>
-  </div>
+    <p>We help customers with amazing services and professional solutions.</p>
 
-  <div class="card">
-    <h3>Customer Support</h3>
-    <p>We are always ready to help our customers.</p>
-  </div>
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Business">
 
-</section>
+    <br>
 
-<section id="contact">
+    <a href="https://wa.me/254700000000">
 
-  <h2>Contact Us</h2>
+      <button>Chat on WhatsApp</button>
 
-  <p>Email: mybusiness@email.com</p>
+    </a>
 
-  <p>Phone: +254 700 000000</p>
+  </section>
 
-</section>
+  <section class="services" id="services">
 
-<footer>
+    <h2>Our Services</h2>
 
-  <p>© 2026 My Business Website</p>
+    <div class="card">
 
-</footer>
+      <h3>Web Design</h3>
 
-<script>
+      <p>Beautiful and modern websites for businesses.</p>
 
-function showMessage(){
-  alert("Thank you for visiting our website!");
-}
+    </div>
 
-</script>
+    <div class="card">
+
+      <h3>Marketing</h3>
+
+      <p>Helping your business grow online successfully.</p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Customer Support</h3>
+
+      <p>We are always ready to help our customers.</p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Graphic Design</h3>
+
+      <p>Professional posters, logos and branding.</p>
+
+    </div>
+
+  </section>
+
+  <section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: mybusiness@email.com</p>
+
+    <p>Phone: +254 700 000000</p>
+
+  </section>
+
+  <footer>
+
+    <p>© 2026 My Business Website</p>
+
+  </footer>
 
 </body>
+
 </html>
