@@ -1,517 +1,315 @@
-      font-size:38px<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My Business Website</title>
+<title>My Business Website</title>
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    html{
-      scroll-behavior:smooth;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    body{
-      font-family:Arial, sans-serif;
-      background:#e9eef5;
-      color:#333;
-      line-height:1.6;
-    }
+body{
+  font-family:Arial, sans-serif;
+  background:#e9eef5;
+  color:#333;
+  line-height:1.6;
+}
 
-    header{
-      background:linear-gradient(90deg,darkblue,blue);
-      color:white;
-      text-align:center;
-      padding:40px 20px;
-    }
+header{
+  background:linear-gradient(90deg,darkblue,blue);
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
 
-    header img{
-      width:100px;
-      margin-bottom:15px;
-    }
+header img{
+  width:100px;
+  margin-bottom:15px;
+}
 
-    header h1{
-      font-size:42px;
-      margin-bottom:10px;
-    }
+header h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
 
-    nav{
-      background:black;
-      text-align:center;
-      padding:15px;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
+nav{
+  background:black;
+  text-align:center;
+  padding:15px;
+  position:sticky;
+  top:0;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin:15px;
-      font-size:18px;
-      transition:0.3s;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:15px;
+  font-size:18px;
+  transition:0.3s;
+}
 
-    nav a:hover{
-      color:lightblue;
-    }
+nav a:hover{
+  color:lightblue;
+}
 
-    .hero{
-      background:linear-gradient(-45deg,#4facfe,#00f2fe,#43e97b,#38f9d7);
-      background-size:400% 400%;
-      animation:gradient 10s ease infinite;
-      text-align:center;
-      padding:60px 20px;
-    }
+.hero{
+  background:linear-gradient(-45deg,#4facfe,#00f2fe,#43e97b,#38f9d7);
+  background-size:400% 400%;
+  animation:gradient 10s ease infinite;
+  text-align:center;
+  padding:60px 20px;
+}
 
-    .hero h2{
-      font-size:38px;
-      margin-bottom:20px;
-      color:white;
-    }
+.hero h2{
+  font-size:38px;
+  margin-bottom:20px;
+  color:white;
+}
 
-    .hero p{
-      font-size:20px;
-      margin-bottom:25px;
-      color:white;
-    }
+.hero p{
+  font-size:20px;
+  margin-bottom:25px;
+  color:white;
+}
 
-    .hero img{
-      width:280px;
-      border-radius:20px;
-      box-shadow:0 0 15px gray;
-    }
+.hero img{
+  width:280px;
+  border-radius:20px;
+  box-shadow:0 0 15px gray;
+}
 
-    button{
-      margin-top:25px;
-      padding:14px 28px;
-      background:green;
-      color:white;
-      border:none;
-      border-radius:10px;
-      font-size:18px;
-      cursor:pointer;
-      transition:0.3s;
-      box-shadow:0 0 15px limegreen;
-    }
+button{
+  margin-top:25px;
+  padding:14px 28px;
+  background:green;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 0 15px limegreen;
+}
 
-    button:hover{
-      background:darkgreen;
-      transform:scale(1.05);
-    }
+button:hover{
+  background:darkgreen;
+  transform:scale(1.05);
+}
 
-    .services{
-      padding:60px 20px;
-      text-align:center;
-    }
+.services{
+  padding:60px 20px;
+  text-align:center;
+}
 
-    .services h2{
-      font-size:35px;
-      margin-bottom:40px;
-    }
+.services h2{
+  font-size:35px;
+  margin-bottom:40px;
+}
 
-    .card{
-      background:white;
-      max-width:700px;
-      margin:20px auto;
-      padding:30px;
-      border-radius:20px;
-      box-shadow:0 0 15px rgba(0,0,0,0.2);
-      transition:0.4s;
-    }
+.card{
+  background:white;
+  max-width:700px;
+  margin:20px auto;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+  transition:0.4s;
+}
 
-    .card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 0 25px rgba(0,0,0,0.3);
-    }
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
 
-    .card h3{
-      color:darkblue;
-      margin-bottom:15px;
-    }
+.card h3{
+  color:darkblue;
+  margin-bottom:15px;
+}
 
-    #contact{
-      background:white;
-      text-align:center;
-      padding:60px 20px;
-    }
+#contact{
+  background:white;
+  text-align:center;
+  padding:60px 20px;
+}
 
-    #contact h2{
-      font-size:35px;
-      margin-bottom:20px;
-    }
+#contact h2{
+  font-size:35px;
+  margin-bottom:20px;
+}
 
-    footer{
-      background:darkblue;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:30px;
-    }
+footer{
+  background:darkblue;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
 
-    @keyframes gradient {
+@keyframes gradient{
 
-      0%{
-        background-position:0% 50%;
-      }
+  0%{
+    background-position:0% 50%;
+  }
 
-      50%{
-        background-position:100% 50%;
-      }
+  50%{
+    background-position:100% 50%;
+  }
 
-      100%{
-        background-position:0% 50%;
-      }
+  100%{
+    background-position:0% 50%;
+  }
 
-    }
+}
 
-    @media(max-width:600px){
+@media(max-width:600px){
 
-      header h1{
-        font-size:30px;
-      }
+  header h1{
+    font-size:30px;
+  }
 
-      .hero h2{
-        font-size:28px;
-      }
+  .hero h2{
+    font-size:28px;
+  }
 
-      .hero img{
-        width:90%;
-      }
+  .hero img{
+    width:90%;
+  }
 
-      nav a{
-        display:block;
-        margin:10px;
-      }
+  nav a{
+    display:block;
+    margin:10px;
+  }
 
-    }
+}
 
-  </style>
+</style>
 
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
-    <h1>My Business</h1>
+<h1>My Business</h1>
 
-    <p>The Best Services For Everyone</p>
+<p>The Best Services For Everyone</p>
 
-  </header>
+</header>
 
-  <nav>
+<nav>
 
-    <a href="#">Home</a>
+<a href="#">Home</a>
 
-    <a href="#services">Services</a>
+<a href="#services">Services</a>
 
-    <a href="#about">About</a>
+<a href="#about">About</a>
 
-    <a href="#contact">Contact</a>
+<a href="#contact">Contact</a>
 
-  </nav>
+</nav>
 
-  <section class="hero">
+<section class="hero">
 
-    <h2>Welcome To My Website</h2>
+<h2>Welcome To My Website</h2>
 
-    <p>
-      We help customers with amazing services and professional solutions.
-    </p>
+<p>
+We help customers with amazing services and professional solutions.
+</p>
 
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Business">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Business">
 
-    <br>
+<br>
 
-    <a href="https://wa.me/254700000000">
+<a href="https://wa.me/254717821401">
 
-      <button>Chat on WhatsApp</button>
+<button>Chat on WhatsApp</button>
 
-    </a>
+</a>
 
-  </section>
+</section>
 
-  <section class="services" id="services">
+<section class="services" id="services">
 
-    <h2>Our Services</h2>
+<h2>Our Services</h2>
 
-    <div class="card">
+<div class="card">
 
-      <h3>Web Design</h3>
+<h3>Web Design</h3>
 
-      <p>Beautiful and modern websites for businesses.</p>
+<p>Beautiful and modern websites for businesses.</p>
 
-    </div>
+</div>
 
-    <div class="card">
+<div class="card">
 
-      <h3>Marketing</h3>
+<h3>Marketing</h3>
 
-      <p>Helping your business grow online successfully.</p>
+<p>Helping your business grow online successfully.</p>
 
-    </div>
+</div>
 
-    <div class="card">
+<div class="card">
 
-      <h3>Customer Support</h3>
+<h3>Customer Support</h3>
 
-      <p>We are always ready to help our customers.</p>
+<p>We are always ready to help our customers.</p>
 
-    </div>
+</div>
 
-    <div class="card">
+<div class="card">
 
-      <h3>Graphic Design</h3>
+<h3>Graphic Design</h3>
 
-      <p>Professional posters, logos and branding.</p>
+<p>Professional posters, logos and branding.</p>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
-  <section class="services" id="about">
+<section class="services" id="about">
 
-    <h2>About Us</h2>
+<h2>About Us</h2>
 
-    <div class="card">
+<div class="card">
 
-      <p>
-        We are a professional company dedicated to helping businesses grow with modern technology and excellent customer service.
-      </p>
+<p>
+We are a professional company dedicated to helping businesses grow with modern technology and excellent customer service.
+</p>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
-  <section id="contact">
+<section id="contact">
 
-    <h2>Contact Us</h2>
+<h2>Contact Us</h2>
 
-    <p>Email: mybusiness@email.com</p>
+<p>Email: mybusiness@email.com</p>
 
-    <p>Phone: +254 700 000000</p>
-
-  </section>
-
-  <footer>
-
-    <p>© 2026 My Business Website</p>
-
-  </footer>
-
-</body>
-
-</html>
-      margin-bottom:20px;
-    }
-
-    .hero p{
-      font-size:20px;
-      margin-bottom:25px;
-    }
-
-    .hero img{
-      width:280px;
-      border-radius:20px;
-      box-shadow:0 0 15px gray;
-    }
-
-    button{
-      margin-top:25px;
-      padding:14px 28px;
-      background:green;
-      color:white;
-      border:none;
-      border-radius:10px;
-      font-size:18px;
-      cursor:pointer;
-      transition:0.3s;
-    }
+<p>Phone: +254 717821401</p>
 
-    button:hover{
-      background:darkgreen;
-      transform:scale(1.05);
-    }
+</section>
 
-    .services{
-      padding:60px 20px;
-      text-align:center;
-    }
+<footer>
 
-    .services h2{
-      font-size:35px;
-      margin-bottom:40px;
-    }
+<p>© 2026 My Business Website</p>
 
-    .card{
-      background:white;
-      max-width:700px;
-      margin:20px auto;
-      padding:30px;
-      border-radius:20px;
-      box-shadow:0 0 15px rgba(0,0,0,0.2);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-5px);
-    }
-
-    .card h3{
-      color:darkblue;
-      margin-bottom:15px;
-    }
-
-    #contact{
-      background:white;
-      text-align:center;
-      padding:60px 20px;
-    }
-
-    #contact h2{
-      font-size:35px;
-      margin-bottom:20px;
-    }
-
-    footer{
-      background:darkblue;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:30px;
-    }
-
-    @media(max-width:600px){
-
-      header h1{
-        font-size:30px;
-      }
-
-      .hero h2{
-        font-size:28px;
-      }
-
-      .hero img{
-        width:90%;
-      }
-
-      nav a{
-        display:block;
-        margin:10px;
-      }
-
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <header>
-
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-
-    <h1>My Business</h1>
-
-    <p>The Best Services For Everyone</p>
-
-  </header>
-
-  <nav>
-
-    <a href="#">Home</a>
-
-    <a href="#services">Services</a>
-
-    <a href="#contact">Contact</a>
-
-  </nav>
-
-  <section class="hero">
-
-    <h2>Welcome To My Website</h2>
-
-    <p>We help customers with amazing services and professional solutions.</p>
-
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Business">
-
-    <br>
-
-    <a href="https://wa.me/254717821401">
-
-      <button>Chat on WhatsApp</button>
-
-    </a>
-
-  </section>
-
-  <section class="services" id="services">
-
-    <h2>Our Services</h2>
-
-    <div class="card">
-
-      <h3>Web Design</h3>
-
-      <p>Beautiful and modern websites for businesses.</p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Marketing</h3>
-
-      <p>Helping your business grow online successfully.</p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Customer Support</h3>
-
-      <p>We are always ready to help our customers.</p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Graphic Design</h3>
-
-      <p>Professional posters, logos and branding.</p>
-
-    </div>
-
-  </section>
-
-  <section id="contact">
-
-    <h2>Contact Us</h2>
-
-    <p>Email: mybusiness@email.com</p>
-
-    <p>Phone: +254 717821401</p>
-
-  </section>
-
-  <footer>
-
-    <p>© 2026 My Business Website</p>
-
-  </footer>
+</footer>
 
 </body>
 
