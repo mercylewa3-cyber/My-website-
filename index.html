@@ -202,14 +202,43 @@ section p{
   margin-top:40px;
 }
 
-.gallery img{
+/* IMAGE BOX */
+
+.image-box{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+}
+
+.image-box img{
   width:300px;
+  display:block;
   border-radius:20px;
   transition:0.3s;
 }
 
-.gallery img:hover{
+.image-box img:hover{
   transform:scale(1.05);
+}
+
+/* IMAGE TEXT */
+
+.image-text{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  padding:15px;
+  font-size:22px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.image-box:hover .image-text{
+  background:rgba(0,255,255,0.8);
+  color:black;
 }
 
 /* TESTIMONIALS */
@@ -372,11 +401,35 @@ We help businesses grow online using modern websites and digital solutions.
 
 <div class="gallery">
 
-  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000">
+  <div class="image-box">
 
-  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000">
 
-  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000">
+    <div class="image-text">
+      Team Work
+    </div>
+
+  </div>
+
+  <div class="image-box">
+
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000">
+
+    <div class="image-text">
+      Business Meeting
+    </div>
+
+  </div>
+
+  <div class="image-box">
+
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000">
+
+    <div class="image-text">
+      Digital Solutions
+    </div>
+
+  </div>
 
 </div>
 
@@ -442,4 +495,4 @@ function toggleDarkMode(){
 </script>
 
 </body>
-</html>
+  </html>i
